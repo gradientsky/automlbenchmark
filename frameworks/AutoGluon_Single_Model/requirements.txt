@@ -1,0 +1,4 @@
+mxnet
+torch==1.2.0
+fastai==1.0.61
+autogluon@file:///Users/ashyrkou/Projects/autogluon/

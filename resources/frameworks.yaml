@@ -58,6 +58,50 @@ AutoGluon_best:
   params:
     presets: best_quality
 
+AutoGluon_Single_Model:
+  version: "0.0.9"
+  project: https://autogluon.mxnet.io
+
+AutoGluon_fastai:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: fastai
+
+AutoGluon_catboost:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: CAT
+
+AutoGluon_lgbm_custom:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: custom
+
+AutoGluon_lgbm:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: GBM
+
+AutoGluon_rf:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: RF
+
+AutoGluon_xt:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: XT
+
+AutoGluon_knn:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: KNN
+
+AutoGluon_nn:
+  extends: AutoGluon_Single_Model
+  params:
+    benchmark_model_type: NN
+
 autosklearn:
   version: '0.6.0'
   project: https://automl.github.io/auto-sklearn/stable/
