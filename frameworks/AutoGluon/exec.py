@@ -2,6 +2,9 @@ import logging
 import os
 import shutil
 import warnings
+
+from autogluon.utils.tabular.ml.models.fastainn.tabular_nn_fastai import NNFastAiTabularModel
+
 warnings.simplefilter("ignore")
 
 import matplotlib
@@ -14,10 +17,16 @@ import autogluon.utils.tabular.metrics as metrics
 
 from frameworks.shared.callee import call_run, result, output_subdir, utils
 
+from autogluon.utils.tabular.ml.trainer.model_presets.presets import MODEL_TYPES, DEFAULT_MODEL_NAMES
+
 log = logging.getLogger(__name__)
 
 
 def run(dataset, config):
+    # Patching to add FASTAINN model string support
+    MODEL_TYPES['FASTAINN'] = NNFastAiTabularModel
+    DEFAULT_MODEL_NAMES[NNFastAiTabularModel] = 'FastAINeuralNet'
+
     log.info("\n**** AutoGluon ****\n")
 
     metrics_mapping = dict(
