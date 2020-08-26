@@ -63,44 +63,44 @@ AutoGluon_Single_Model:
   project: https://autogluon.mxnet.io
 
 AutoGluon_fastai:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: fastai
+    hyperparameters: {FASTAINN: {}}
 
 AutoGluon_catboost:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: CAT
+    hyperparameters: {CAT: {}}
 
-AutoGluon_lgbm_custom:
-  extends: AutoGluon_Single_Model
-  params:
-    benchmark_model_type: custom
+#AutoGluon_lgbm_custom:
+#  extends: AutoGluon_Single_Model
+#  params:
+#    benchmark_model_type: custom
 
 AutoGluon_lgbm:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: GBM
+    hyperparameters: {GBM: {}}
 
 AutoGluon_rf:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: RF
+    hyperparameters: {RF: {}}
 
 AutoGluon_xt:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: XT
+    hyperparameters: {XT: {}}
 
 AutoGluon_knn:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: KNN
+    hyperparameters: {KNN: {}}
 
 AutoGluon_nn:
-  extends: AutoGluon_Single_Model
+  extends: AutoGluon
   params:
-    benchmark_model_type: NN
+    hyperparameters: {NN: {}}
 
 autosklearn:
   version: '0.6.0'
