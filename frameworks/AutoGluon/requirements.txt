@@ -1,4 +1,4 @@
 mxnet
 autogluon==0.0.9
 torch==1.2.0
-fastai==1.0.61
+fastai==1.*
