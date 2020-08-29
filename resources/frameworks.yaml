@@ -72,10 +72,10 @@ AutoGluon_catboost:
   params:
     hyperparameters: {CAT: {}}
 
-#AutoGluon_lgbm_custom:
-#  extends: AutoGluon_Single_Model
-#  params:
-#    benchmark_model_type: custom
+AutoGluon_lgbm_custom:
+  extends: AutoGluon
+  params:
+    hyperparameters: {custom: ['GBM']}
 
 AutoGluon_lgbm:
   extends: AutoGluon
