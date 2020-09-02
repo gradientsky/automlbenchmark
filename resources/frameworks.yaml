@@ -59,7 +59,7 @@ AutoGluon_best:
 AutoGluon_fastai:
   extends: AutoGluon
   params:
-    hyperparameters: {FASTAINN: {}}
+    hyperparameters: {FASTAI: {}}
 
 AutoGluon_catboost:
   extends: AutoGluon
